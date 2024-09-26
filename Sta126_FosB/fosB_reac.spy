@@ -1,0 +1,49 @@
+#
+##
+### fosB additional reactions
+##
+#
+
+Structural()
+
+#bacillithiol synthesis
+"RXN8J2-1":
+	1.0 "MAL" + 1.0 "UDP-N-ACETYL-D-GLUCOSAMINE" -> 1.0 "UDP" + 1.0 "CPD8J2-1" + 1.0 "PROTON"
+	~
+
+"RXN8J2-2":
+	1.0 "CPD8J2-1" + 1.0 "WATER" -> 1.0 "ACET" + 1.0 "CPD8J2-2"
+	~
+
+"RXN8J2-3":
+	1.0 "CPD8J2-2" + 1.0 "ATP" + 1.0 "CYS" -> 1.0 "ADP" + 1.0 "CPD8J2-3" + 1.0 "PROTON" + 1.0 Pi
+	~
+
+
+#fosfomycin import
+"FOSF_mm_tx":
+	1.0 "x_CPD0-1113"-> 1.0 "CPD0-1113" 
+	~
+
+
+#bacillithiol-fosfomycin export
+"BACILLFOSF_tx":
+	1.0 "CPD-17277" -> 1.0 "x_CPD-17277"
+	~
+
+
+#fosB reaction
+"RXN-16037":
+	1.0 "CPD8J2-3" + 1.0 "CPD0-1113" -> 1.0 "CPD-17277"
+	~
+
+
+#fosB hypotetical reaction PEP
+#"BACILLPEP-RXN":
+#	1.0 "CPD8J2-3" + 1.0 "PHOSPHO-ENOL-PYRUVATE" -> 1.0 "BACILLPEP"
+#	~
+
+#fosB hypothetical reaction methylglyoxal degradation
+#"-RXN":
+#	1.0 "CPD8J2-3" + 1.0 "PHOSPHO-ENOL-PYRUVATE" -> 1.0 "BACILLPEP"
+#	~

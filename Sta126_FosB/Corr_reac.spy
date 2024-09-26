@@ -1,0 +1,107 @@
+"RXN-15123":
+	1.0 "CPD-16013" + 1.0 "WATER" <> 1.0 "2-OXOBUTANOATE" + 1.0 "AMMONIUM"
+	~
+
+"RXN-14048":
+	1.0 "L-CYSTATHIONINE" -> 1.0 "CYS" + 1.0 "CPD-15056"
+	~
+
+"RXN-15122":
+	1.0 "THR" -> 1.0 "WATER" + 1.0 "CPD-15056"
+	~
+
+"RXN-8899":
+	1.0 "WATER" + 1.0 "2-AMINOACRYLATE" -> 1.0 "PYRUVATE" + 1.0 "AMMONIUM"
+	~
+
+"RXN-15127":
+	1.0 "WATER" + 1.0 "CPD-16015" -> 1.0 "PYRUVATE" + 1.0 "AMMONIUM"
+	~
+
+"RXN-15125":
+	1.0 "SER" -> 1.0 "WATER" + 1.0 "2-AMINOACRYLATE"
+	~
+
+"GDPPYPHOSKIN-RXN":
+	1.0 "GDP" + 1.0 "ATP" <> 1.0 "GUANOSINE-5DP-3DP" + 1.0 "AMP" + 1.0 "PROTON"
+	~
+
+"RXN-12721":
+	1.0 "OXIDIZED-GLUTATHIONE" + 2.0 "PROTON" + 1.0 "SELENITE" + 1.0 "AMP" <- 2.0 "GLUTATHIONE" + 1.0 "CPD-13713"
+	~
+
+"PPGPPSYN-RXN":
+	1.0 "GUANOSINE-5DP-3DP" + 1.0 "WATER" -> 1.0 "GDP" + 1.0 "PPI"
+	~
+
+"GTPPYPHOSKIN-RXN":
+	1.0 "GTP" + 1.0 "ATP" <> 1.0 "GDP-TP" + 1.0 "AMP" + 1.0 "PROTON"
+	~
+
+"RXN0-6427":
+	1.0 "GDP-TP" + 1.0 "WATER" -> 1.0 "GTP" + 1.0 "PPI"
+	~
+
+"ATPPHOSPHORIBOSYLTRANS-RXN":
+	1.0 "PPI" + 1.0 "PHOSPHORIBOSYL-ATP" <- 1.0 "PRPP" + 1.0 "ATP"
+	~
+
+"HISTPRATPHYD-RXN":
+	1.0 "WATER" + 1.0 "PHOSPHORIBOSYL-ATP" <> 1.0 "PHOSPHORIBOSYL-AMP" + 1.0 "PPI" + 1.0 "PROTON"
+	~
+
+"RXN0-723":
+	1.0 "CARBON-DIOXIDE" + 1.0 "WATER" + 1.0 "DCTP" <- 1.0 "CTP" + 1.0 "FORMATE" + 1.0 "PROTON"
+	~
+
+"RXN0-724":
+	1.0 "CARBON-DIOXIDE" + 1.0 "WATER" + 1.0 "DUTP" <- 1.0 "UTP" + 1.0 "FORMATE" + 1.0 "PROTON"
+	~
+
+"1.5.1.15-RXN":
+	1.0 "NAD" + 1.0 "PROTON" + 1.0 "METHYLENE-THF-GLU-N" <> 1.0 "NADH" + 1.0 "5-10-METHENYL-THF-GLU-N"
+	~
+
+"RXN0-747":
+	1.0 "Oxidized-NrdH-Proteins" + 1.0 "WATER" + 1.0 "DADP" <- 1.0 "ADP" + 1.0 "Reduced-NrdH-Proteins"
+	~
+
+"1.8.4.8-RXN":
+	1.0 "3-5-ADP" + 1.0 "Ox-Thioredoxin"+ 1.0 "SO3" + 2.0 "PROTON" <> 1.0 "PAPS" + 1.0 "Red-Thioredoxin"
+	~
+
+"1.5.1.20-RXN":
+	1.0 "NAD" + 1.0 "5-METHYL-THF-GLU-N" + 1.0 "PROTON" <> 1.0 "NADH" + 1.0 "METHYLENE-THF-GLU-N"
+	~
+
+"UDPREDUCT-RXN":
+	1.0 "Ox-Thioredoxin" + 1.0 "WATER" + 1.0 "DUDP" <- 1.0 "UDP" + 1.0 "Red-Thioredoxin"
+	~
+
+"CDPREDUCT-RXN":
+	1.0 "Ox-Thioredoxin" + 1.0 "WATER" + 1.0 "DCDP" <- 1.0 "CDP" + 1.0 "Red-Thioredoxin"
+	~
+
+"GDPREDUCT-RXN":
+	1.0 "Ox-Thioredoxin" + 1.0 "DGDP" + 1.0 "WATER" <- 1.0 "GDP" + 1.0 "Red-Thioredoxin"
+	~
+
+"RXN0-748":
+	1.0 "Oxidized-NrdH-Proteins" + 1.0 "DGDP" + 1.0 "WATER" <- 1.0 "GDP" + 1.0 "Reduced-NrdH-Proteins"
+	~
+
+"ADPREDUCT-RXN":
+	1.0 "Ox-Thioredoxin" + 1.0 "WATER" + 1.0 "DADP" <> 1.0 "Red-Thioredoxin" + 1.0 "ADP"
+	~
+
+"RXN-18037":
+	1.0 "Gro-P-Glc2-DAG" + 2.0 "L-1-PHOSPHATIDYL-GLYCEROL" -> 1.0 "Gro-P-n-Gro-P-Glc2-DAG" + 2.0 DIACYLGLYCEROL
+	~
+
+"TRANS-RXN-314":
+	1.0 "CPD-19311" + 1.0 WATER + 1.0 ATP -> 1.0 Pi + 1.0 "x_CPD-19311" + 1.0 PROTON + 1.0 ADP
+	~
+
+"6.1.1.13-RXN":
+	1.0 "1-Phosphatidyl-2-O-D-Ala-Glycerol" + 1.0 "x_CPD-19311" -> 1.0 "CPD-19305" + 1.0 "L-1-PHOSPHATIDYL-GLYCEROL"
+	~

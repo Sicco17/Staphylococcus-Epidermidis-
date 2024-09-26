@@ -1,0 +1,26 @@
+#mM media concentration
+media = {'ARG':2.0, 
+	'NIACINE':0.01,
+	 'GLC':55.5,
+	 'L-ALPHA-ALANINE':3.0,
+	 'GLT':14.44,
+	 'HIS':1.74,
+	 'LYS':5.1,
+	 'ILE':4.3,
+	 'CYS':0.43,
+	 'VAL':4.27,
+	 'TYR':3.37,
+	 'MET':1.8,
+	 'THR':3.5,
+	 'PRO':8.6,
+	 'PHE':2.8,
+	 'GLY':2.9,
+	 'SER':5.33,
+	 'L-ASPARTATE':4.8,
+	 'LEU':6.4,
+	 'AMMONIUM':20.6,
+	 'TRP':0.6,
+	'Pi':2,
+	'SULFATE':2, 'CPD0-1113':0.47}
+#'ASN':0.0 as it is not present in the media
+#fosfomycin addition in the medium

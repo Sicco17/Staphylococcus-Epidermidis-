@@ -1,0 +1,277 @@
+Structural()
+
+#
+##
+### MINIMAL MEDIA
+##
+#
+
+###ATPASE-RXN####
+
+
+"ATPASE-RXN":
+    "ATP" + "WATER" -> "ADP" + "Pi" + "PROTON" + "x_AWork"
+    ~
+
+
+###added for glycogen biosynthesis###
+
+#
+#no "L-ALPHA-ALANINE_mm_tx"
+#
+
+"ATPSYN-RXN":
+	1.0 Pi + 1.0 ADP + 4.0 x_PROTON <> 1.0 WATER + 1.0 ATP + 3.0 PROTON
+	~
+
+"NADH-DEHYDROG-A-RXN":
+	1.0 NADH + 1.0 MENAQUINONE + 5.0 PROTON -> 1.0 "REDUCED-MENAQUINONE" + 1.0 NAD + 4.0 x_PROTON
+	~
+
+"RXN-14107":
+	1.0 "REDUCED-MENAQUINONE" + 2.0 "Cytochromes-C-Oxidized" -> 1.0 MENAQUINONE + 2.0 "Cytochromes-C-Reduced" + 2.0 x_PROTON
+	~
+
+"CYTOCHROME-C-OXIDASE-RXN":
+	1.0 "OXYGEN-MOLECULE" + 8.0 PROTON + 4.0 "Cytochromes-C-Reduced" -> 4.0 "Cytochromes-C-Oxidized" + 2.0 WATER + 4.0 x_PROTON
+	~
+
+"GLUC1PADENYLTRANS-RXN":
+	1.0 ATP + 1.0 "GLC-1-P" + 1.0 PROTON -> 1.0 PPI + 1.0 "ADP-D-GLUCOSE"
+	~
+
+"GLYCOGENSYN-RXN":
+	1.0 WATER + 1.0 "ADP-D-GLUCOSE" <> 1.0 glycogen + 1.0 PROTON + 1.0 ADP
+	~
+
+###reactions added for PIA1 biosynthesis####
+
+PIA1_synth:
+	1.0 WATER + 1.0 "UDP-N-ACETYL-D-GLUCOSAMINE" -> 1.0 UDP + 1.0 PIA1 + 1.0 PROTON
+	~
+
+###reactions added for PIA2 biosynthesis####
+
+#
+#no "ARG_ORN_antip_AA_mm_tx"
+#
+
+PIA2_synth:
+	1.0 WATER + 1.0 PIA1 -> 1.0 ACET + 1.0 PIA2
+	~
+
+###reactions added for PIA3 biosynthesis####
+
+PIA3_synth:
+	1.0 "SUC-COA" + 1.0 PIA1 -> 1.0 PIA3 + 1.0 "CO-A"
+	~
+
+#
+#no "GLT_NA_AA_mm_tx"
+#
+
+"2.7.3.9-RXN":
+	1.0 "Hpr-Histidine" + 1.0 "PHOSPHO-ENOL-PYRUVATE" -> 1.0 PYRUVATE + 1.0 "Hpr-pi-phospho-L-histidines"
+	~
+
+Palmitate_synth:
+	1.0 WATER + 7.0 ATP + 8.0 "ACETYL-COA" + 6.0 PROTON + 14.0 NADPH <> 14.0 NADP + 1.0 PALMITATE + 7.0 Pi + 8.0 "CO-A" + 7.0 ADP
+	~
+
+PA_synth_NADPH:
+	2.0 PALMITATE + 1.0 "DIHYDROXY-ACETONE-PHOSPHATE" + 1.0 NADPH <> 1.0 NADP + 1.0 "L-PHOSPHATIDATE"
+	~
+
+"DIACYLGLYKIN-RXN":
+	1.0 ATP + 1.0 DIACYLGLYCEROL <> 1.0 "L-PHOSPHATIDATE" + 1.0 PROTON + 1.0 ADP
+	~
+
+###reactions added for PG biosynthesis####
+
+#
+#no "GLT_NA_AA_mm_tx"
+#
+
+#
+#no "L-ALPHA-ALANINE_AA_mm_tx"
+#
+
+"CDPDIGLYSYN-RXN":
+	1.0 PROTON + 1.0 CTP + 1.0 "L-PHOSPHATIDATE" <> 1.0 CDPDIACYLGLYCEROL + 1.0 PPI
+	~
+
+"PHOSPHAGLYPSYN-RXN":
+	1.0 "GLYCEROL-3P" + 1.0 CDPDIACYLGLYCEROL <> 1.0 PROTON + 1.0 "L-1-PHOSPHATIDYL-GLYCEROL-P" + 1.0 CMP
+	~
+
+"PGPPHOSPHA-RXN":
+	1.0 "L-1-PHOSPHATIDYL-GLYCEROL-P" + 1.0 WATER -> 1.0 Pi + 1.0 "L-1-PHOSPHATIDYL-GLYCEROL"
+	~
+
+
+###reactions added for CL biosynthesis####
+
+#
+#no "GLT_NA_AA_mm_tx"
+#
+
+#
+#no "L-ALPHA-ALANINE_AA_mm_tx"
+#
+
+"CARDIOLIPSYN-RXN":
+	2.0 "L-1-PHOSPHATIDYL-GLYCEROL" -> 1.0 GLYCEROL + 1.0 CARDIOLIPIN
+	~
+
+###reactions added for LTA biosynthesis#### GLC2-DAG_bm_tx and GLC-DAG_bm_tx also
+
+#
+#no "GLT_NA_AA_mm_tx"
+#
+
+#
+#no "L-ALPHA-ALANINE_AA_mm_tx"
+#
+
+"RXN-18014":
+	1.0 "D-ALANINE" + 1.0 ATP + 1.0 "D-alanine-carrier-protein" -> 1.0 AMP + 1.0 "D-Ala-DltC" + 1.0 PPI
+	~
+
+"RXN-18013":
+	1.0 "D-Ala-DltC" + 1.0 "L-1-PHOSPHATIDYL-GLYCEROL" -> 1.0 "1-Phosphatidyl-2-O-D-Ala-Glycerol" + 1.0 "D-alanine-carrier-protein"
+	~
+
+"RXN-18039":
+	1.0 "GlcNAc-Gro-P-n-Gro-P-Glc2-DAG" + 1.0 "1-Phosphatidyl-2-O-D-Ala-Glycerol" -> 1.0 "L-1-PHOSPHATIDYL-GLYCEROL" + 1.0 "Type-I-LTA"
+	~
+
+"RXN-18038":
+	1.0 "Gro-P-n-Gro-P-Glc2-DAG" + 1.0 "CPD-19317" -> 1.0 PROTON + 1.0 "CPD-9646" + 1.0 "GlcNAc-Gro-P-n-Gro-P-Glc2-DAG"
+	~
+
+"RXN-18037":
+	1.0 "Gro-P-Glc2-DAG" + 2.0 "L-1-PHOSPHATIDYL-GLYCEROL" -> 1.0 "Gro-P-n-Gro-P-Glc2-DAG" + 2.0 DIACYLGLYCEROL
+	~
+
+"RXN-15117":
+	1.0 "CPD-12575" + 1.0 "D-Glucosyl-12-diacyl-glycerols" <> 1.0 PROTON + 1.0 "diacyl-3-O-glucl-1-6-gluc-sn-glycerol" + 1.0 UDP
+	~
+
+"RXN-18035":
+	1.0 "diacyl-3-O-glucl-1-6-gluc-sn-glycerol" + 1.0 "L-1-PHOSPHATIDYL-GLYCEROL" -> 1.0 "Gro-P-Glc2-DAG" + 1.0 DIACYLGLYCEROL
+	~
+
+"RXN-18036":
+	1.0 "UDP-N-ACETYL-D-GLUCOSAMINE" + 1.0 "CPD-9646" -> 1.0 "CPD-19317" + 1.0 UDP
+	~
+
+"RXN-16648":
+	1.0 DIACYLGLYCEROL + 1.0 "CPD-12575" <> 1.0 PROTON + 1.0 UDP + 1.0 "D-Glucosyl-12-diacyl-glycerols"
+	~
+
+###reactions added for Menaquinone biosynthesis####
+
+#
+#no "GLT_NA_AA_mm_tx"
+#
+
+#
+#no "L-ALPHA-ALANINE_AA_mm_tx"
+#
+
+
+"RXN-8992":
+	1.0 "FARNESYL-PP" + 5.0 "DELTA3-ISOPENTENYL-PP" <> 1.0 "OCTAPRENYL-DIPHOSPHATE" + 5.0 PPI
+	~
+
+###reactions added for PepGly biosynthesis####
+
+#
+#no "GLT_NA_AA_mm_tx"
+#
+
+#
+#no "L-ALPHA-ALANINE_AA_mm_tx"
+#
+
+"ASPAMINOTRANS-RXN":
+	1.0 "2-KETOGLUTARATE" + 1.0 "L-ASPARTATE" <> 1.0 OXALACETIC_ACID + 1.0 GLT
+	~
+
+"THREONINE-ALDOLASE-RXN":
+	1.0 THR <> 1.0 ACETALD + 1.0 GLY
+	~
+
+"RXN-11295":
+	1.0 "CPD-12298" + 1.0 "Charged-GLY-tRNAs" <> 1.0 PROTON + 1.0 "CPD-12242" + 1.0 "GLY-tRNAs"
+	~
+
+"RXN-11296":
+	1.0 "CPD-12242" + 2.0 "Charged-GLY-tRNAs" <> 2.0 PROTON + 1.0 "CPD-12243" + 2.0 "GLY-tRNAs"
+	~
+
+"RXN-11297":
+	1.0 "CPD-12243" + 2.0 "Charged-GLY-tRNAs" -> 2.0 PROTON + 1.0 "CPD-12297" + 2.0 "GLY-tRNAs"
+	~
+
+"RXN-11291":
+	2.0 "CPD-12297" <> 1.0 PROTON + 1.0 "CPD-12259" + 1.0 "UNDECAPRENYL-DIPHOSPHATE"
+	~
+
+"GLYCINE--TRNA-LIGASE-RXN":
+	1.0 ATP + 1.0 GLY + 1.0 "GLY-tRNAs" -> 1.0 AMP + 1.0 PPI + 1.0 "Charged-GLY-tRNAs"
+	~
+
+"RXN-11339":
+	1.0 "CPD-7695" + 1.0 AMMONIUM <> 1.0 WATER + 1.0 "CPD-12298"
+	~
+
+###reactions added for WTA-PG biosynthesis####
+
+#
+#no "GLT_NA_AA_mm_tx"
+#
+
+#
+#no "L-ALPHA-ALANINE_AA_mm_tx"
+#
+
+"RIBITOL-5-PHOSPHATE-2-DEHYDROGENASE-RXN":
+	1.0 NADP + 1.0 "CPD-372" <- 1.0 PROTON + 1.0 "RIBULOSE-5P" + 1.0 NADPH
+	~
+
+"RXN-18006":
+	1.0 "CPD-606" + 1.0 "CPD-5802" -> 1.0 PROTON + 1.0 CMP + 1.0 "CPD-19301"
+	~
+
+"RXN-18007":
+	1.0 "CPD-1111" + 1.0 "CPD-19301" -> 1.0 PROTON + 1.0 CMP + 1.0 "CPD-19302"
+	~
+
+"RXN-18008":
+	1.0 "CPD-1111" + 1.0 "CPD-19302" -> 1.0 PROTON + 1.0 "CPD-19303" + 1.0 CMP
+	~
+
+"2.4.1.53-RXN":
+	1.0 "CPD-19303" + 1.0 "UDP-N-ACETYL-D-GLUCOSAMINE" -> 1.0 PROTON + 1.0 "CPD-19793" + 1.0 UDP
+	~
+
+"RXN-18020":
+	1.0 "UDP-N-ACETYL-D-GLUCOSAMINE" + 1.0 "CPD-19793" -> 1.0 PROTON + 1.0 "CPD-19311" + 1.0 UDP
+	~
+
+"TRANS-RXN-314":
+	1.0 "CPD-19311" + 1.0 WATER + 1.0 ATP -> 1.0 PROTON + 1.0 ADP + 1.0 Pi + 1.0 "CPD-19311_peri"
+	~
+
+"2.7.7.40-RXN":
+	1.0 PROTON + 1.0 CTP + 1.0 "CPD-372" <> 1.0 "CPD-1111" + 1.0 PPI
+	~
+
+"6.1.1.13-RXN":
+	1.0 "CPD-19311_peri" + 1.0 "1-Phosphatidyl-2-O-D-Ala-Glycerol" -> 1.0 "L-1-PHOSPHATIDYL-GLYCEROL" + 1.0 "CPD-19305"
+	~
+
+"RXN-18027":
+	1.0 WATER + 1.0 "CPD-12297" + 1.0 "CPD-19305" -> 2.0 PROTON + 1.0 "CPD-9646" + 1.0 "Rbo-P-Teichoic-aureus-peptidoglycan" + 1.0 "UNDECAPRENYL-DIPHOSPHATE"
+	~

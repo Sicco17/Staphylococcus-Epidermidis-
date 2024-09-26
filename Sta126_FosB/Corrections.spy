@@ -1,0 +1,10 @@
+Structural()
+
+#### "Damaged-DNA-pyrimidine" has no synthesis reaction (orphan)
+#### "Modified-Bases" has no catabolic reactions (dead-end)
+#### Endonuclease reaction
+#### Removed: products can be derived from balanced reactions
+
+"RXN0-2601":
+	1.0 WATER + 1.0 "Damaged-DNA-Pyrimidine" -> 1.0 PROTON + 1.0 "5-Phospho-terminated-DNAs" + 1.0 "a-DNA-3-alpha-beta-unsaturated-aldehyde" + 1.0 "Modified-Bases"
+	~

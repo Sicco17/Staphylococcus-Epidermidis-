@@ -1,0 +1,4 @@
+Structural()
+
+Include(Cytosol.spy, MinBiomass_fosB.spy, Minimal_media.spy, Extras.spy, fosB_reac.spy)
+
